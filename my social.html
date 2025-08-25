@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Socials — Aesthetic Links</title>
+  <meta name="description" content="All my social media links in one beautiful page." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg-1: #0c0f14;        /* deep charcoal */
+      --bg-2: #111826;        /* navy midnight */
+      --card: rgba(255,255,255,0.08);
+      --card-stroke: rgba(255,255,255,0.12);
+      --text: #e8ecf1;
+      --muted: #a6b0c3;
+      --glow-1: #9b66ff;      /* lavender */
+      --glow-2: #00e0ff;      /* cyan */
+      --accent: #7b5cff;      /* primary accent */
+      --accent-2: #1ee5bd;    /* secondary accent */
+      --radius: 22px;
+      --shadow: 0 10px 30px rgba(0,0,0,0.35);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji", sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(60vw 60vw at 20% -10%, rgba(123,92,255,0.22), transparent 55%),
+        radial-gradient(50vw 50vw at 90% 20%, rgba(30,229,189,0.18), transparent 55%),
+        linear-gradient(160deg, var(--bg-1), var(--bg-2));
+      display:grid;
+      place-items:center;
+      padding:32px;
+    }
+
+
+
+a {
+      text-decoration: none;
+      color: #333;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+
+    .wrap{
+      width:min(980px, 100%);
+      display:grid;
+      gap:22px;
+    }
+    header{
+      background:linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.06));
+      border:1px solid var(--card-stroke);
+      box-shadow: var(--shadow), 0 0 0 1px rgba(255,255,255,0.05) inset;
+      border-radius: calc(var(--radius) + 6px);
+      padding:28px 28px 24px;
+      backdrop-filter: blur(10px) saturate(120%);
+      position:relative;
+      overflow:hidden;
+    }
+    header:before{
+      content:"";
+      position:absolute; inset:-1px; border-radius:inherit;
+      background: conic-gradient(from 180deg, var(--glow-1), var(--glow-2), var(--glow-1));
+      filter: blur(40px); opacity:.18; z-index:0;
+    }
+    .hero{
+      position:relative; z-index:1;
+      display:flex; align-items:center; gap:18px;
+    }
+    .avatar{
+      width:72px; height:72px; border-radius:20px;
+      background: linear-gradient(145deg, rgba(123,92,255,.45), rgba(30,229,189,.45));
+      display:grid; place-items:center; font-weight:800; font-size:26px;
+      box-shadow: 0 8px 26px rgba(0,0,0,.35), 0 0 0 1px rgba(255,255,255,.16) inset;
+    }
+    h1{font-size:clamp(26px, 4vw, 36px); line-height:1.15; margin:0}
+    .subtitle{color:var(--muted); font-weight:400}
+
+    /* Grid of links */
+    .grid{
+      display:grid;
+      grid-template-columns: repeat( auto-fit, minmax(230px, 1fr) );
+      gap:16px;
+    }
+    .card{
+      background: var(--card);
+      border:1px solid var(--card-stroke);
+      border-radius: var(--radius);
+      padding:16px;
+      display:flex; align-items:center; gap:14px;
+      text-decoration:none; color:var(--text);
+      position:relative; overflow:hidden;
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+    .card:hover{
+      transform: translateY(-4px);
+      box-shadow: 0 14px 40px rgba(0,0,0,.35), 0 0 0 2px rgba(123,92,255,.25);
+      border-color: rgba(255,255,255,0.28);
+    }
+    .card:after{
+      content:""; position:absolute; inset:-1px; border-radius:inherit;
+      background: radial-gradient(120px 60px at 0% 0%, rgba(123,92,255,.25), transparent 60%),
+                  radial-gradient(120px 60px at 100% 100%, rgba(30,229,189,.25), transparent 60%);
+      opacity:0; transition: opacity .25s ease;
+    }
+    .card:hover:after{ opacity:.9 }
+
+    .icon{
+      width:42px; height:42px; flex:0 0 42px; border-radius:14px;
+      display:grid; place-items:center; position:relative; overflow:hidden;
+      background: linear-gradient(145deg, rgba(255,255,255,.12), rgba(255,255,255,.06));
+      border:1px solid rgba(255,255,255,.18);
+    }
+    .label{font-weight:600; letter-spacing:.2px}
+    .handle{color:var(--muted); font-family:"JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size:12px}
+
+    /* Tiny aesthetic toggle */
+    .toolbar{
+      display:flex; gap:10px; align-items:center; margin-top:8px;
+    }
+    .btn{
+      background: linear-gradient(145deg, rgba(255,255,255,.12), rgba(255,255,255,.06));
+      border:1px solid var(--card-stroke);
+      border-radius: 999px; padding:8px 12px; font-size:12px; color:var(--text);
+      cursor:pointer; transition: transform .2s ease, border-color .2s ease;
+    }
+    .btn:hover{ transform: translateY(-1px); border-color: rgba(255,255,255,.28) }
+
+    footer{ color:var(--muted); text-align:center; font-size:12px; margin-top:6px }
+
+    /* Brand accent rings */
+    .ring{ position:absolute; inset:-1px; border-radius:inherit; pointer-events:none; filter:blur(14px); opacity:.18 }
+    .insta{ background: conic-gradient(#f9ce34, #ee2a7b, #6228d7, #f9ce34) }
+    .yt{ background: radial-gradient(circle at 40% 50%, #ff0000, transparent 60%) }
+    .behance{ background: radial-gradient(circle at 40% 50%, #1769ff, transparent 60%) }
+    .x{ background: radial-gradient(circle at 40% 50%, #fff, transparent 60%) }
+    .fb{ background: radial-gradient(circle at 40% 50%, #1877f2, transparent 60%) }
+    .li{ background: radial-gradient(circle at 40% 50%, #0a66c2, transparent 60%) }
+    .up{ background: radial-gradient(circle at 40% 50%, #6fda44, transparent 60%) }
+    .pin{ background: radial-gradient(circle at 40% 50%, #e60023, transparent 60%) }
+    .threads{ background: radial-gradient(circle at 40% 50%, #fff, transparent 60%) }
+
+    /* Make it pretty on very small screens */
+    @media (max-width:420px){
+      .icon{ width:38px; height:38px; border-radius:12px }
+    }
+
+    .back-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: linear-gradient(145deg, rgba(255,255,255,.12), rgba(255,255,255,.06));
+  border: 1px solid var(--card-stroke);
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 14px;
+  color: var(--text);
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  z-index: 1000;
+  transition: transform .2s ease, border-color .2s ease;
+}
+.back-btn:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255,255,255,.28);
+}
+
+      
+    
+
+  </style>
+</head>
+<body>
+    <a href="index.html"><button class="back-btn" onclick="history.back()">← Back</button></a>
+    <main class="wrap">
+      <header>
+        <div class="hero">
+          <div class="avatar" aria-hidden="true">AT</div>
+          <div>
+            <h1>All My Socials</h1>
+            <div class="subtitle">aesthetic vibes ✨</div>
+            <div class="toolbar">
+        
+          </div>
+        </div>
+      </header>
+
+      <section class="grid" aria-label="Social media links">
+        <!-- Instagram -->
+        <a class="card" href="https://www.instagram.com/poonam_retouchar?igsh=MXM3bXNkcWp5Nnc2YQ==" target="_blank" rel="noopener" aria-label="Instagram">
+          <span class="icon">
+            <span class="ring insta"></span>
+            <!-- Simple Instagram camera icon -->
+            <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="6" fill="none" stroke="currentColor" stroke-width="1.8"/>
+              <circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+              <circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/>
+            </svg>
+          </span>
+          <span>
+            <div class="label">Instagram</div>
+            <div class="handle">Poonam retoucher</div>
+          </span>
+        </a>
+
+
+      </section>
+
+      <footer>
+         <span id=""></span>
+      </footer>
+    </main>
+
+    <script>
+      // Live year
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Tiny theme switcher with CSS variables
+      const palettes = {
+        violet: {
+          glow1: '#9b66ff', glow2: '#00e0ff', accent: '#7b5cff', accent2: '#1ee5bd',
+          bg1: '#0c0f14', bg2: '#111826'
+        },
+        sunset: {
+          glow1: '#ff8a00', glow2: '#ff2d55', accent: '#ff6a88', accent2: '#ffc371',
+          bg1: '#0f0a12', bg2: '#1a0f1f'
+        },
+        mint: {
+          glow1: '#00ffa3', glow2: '#00d1ff', accent: '#1ee5bd', accent2: '#7b5cff',
+          bg1: '#07130f', bg2: '#0f1f1b'
+        },
+        rose: {
+          glow1: '#ff6bcb', glow2: '#8a9eff', accent: '#ff6bcb', accent2: '#8a9eff',
+          bg1: '#100c10', bg2: '#191222'
+        }
+      }
+      function swapTheme(key){
+        const p = palettes[key] || palettes.violet;
+        const r = document.documentElement;
+        r.style.setProperty('--glow-1', p.glow1);
+        r.style.setProperty('--glow-2', p.glow2);
+        r.style.setProperty('--accent', p.accent);
+        r.style.setProperty('--accent-2', p.accent2);
+        r.style.setProperty('--bg-1', p.bg1);
+        r.style.setProperty('--bg-2', p.bg2);
+      }
+    </script>
+</body>
+</html>

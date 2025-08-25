@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+ 
+
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: linear-gradient(135deg, #e0c3fc, #88479e);
+      color: #333;
+      min-height: 100vh;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .about-container {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 1200px;
+      width: 100%;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      animation: fadeIn 1s ease-out;
+    }
+
+    .profile-photo {
+      flex: 1 1 250px;
+      max-width: 300px;
+    }
+
+    .profile-photo img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .about-text {
+      flex: 2 1 400px;
+      color: #fff;
+    }
+
+    .about-text h1 {
+      font-size: 36px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      font-size: 18px;
+      line-height: 1.8;
+      font-weight: 300;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      margin-top: 30px;
+    }
+
+    .section h2 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .section p {
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 968px) {
+      .about-container {
+        flex-direction: column;
+        padding: 30px 20px;
+      }
+
+      .about-text h1 {
+        font-size: 28px;
+      }
+
+      .about-text p,
+      .section p {
+        font-size: 16px;
+      }
+    }
+
+    .back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  color: #000000;
+  padding: 10px 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+  </style>
+</head>
+<body>
+
+    <a href="index.html" class="back-button">← Back</a>
+    <br><br>
+
+
+  <div class="about-container">
+    <div class="profile-photo">
+      <!-- Replace the src with your actual image file or URL -->
+      <img src="image/1.jpg" alt="Your Photo" />
+    </div>
+
+    <div class="about-text">
+      <h1>Hi, I'm Poonam Rajput</h1>
+      <p>
+     I'm a passionate photo retoucher with over 5 years of experience <br> turning raw visuals into powerful, polished content. I focus on every detail to <br> bring your vision to life with creativity and precision.
+      </p>
+
+      <div class="section">
+        <h2>🎯 Mission</h2>
+        <p>
+To craft visual content that enhances, simplifies, and elevates how people experience stories through photo retouching.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>💡 Values</h2>
+        <p>
+          Creativity, precision, authenticity, passion, purpose, artistry, integrity, quality, honesty, curiosity, craft, and clarity guide every visual I create.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>🚀 What I Do</h2>
+        <p>
+          ✦ Color Correction<br>
+          ✦ Color grading<br>
+          ✦ Detail Enhancement<br>
+          ✦ Consistency<br>
+          ✦ Lighting Adjustment<br>
+          ✦ Creative Vision<br>
+          ✦ Problem Solving & Digital Strategy
+        </p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+

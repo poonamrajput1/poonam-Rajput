@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9fafb;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    p.subtext {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    .form-connect {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .form-section, .connect-section {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .form-section input, .form-section select, .form-section textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    .form-section textarea {
+      height: 120px;
+      resize: vertical;
+    }
+
+    .form-section button {
+      padding: 14px;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .connect-section h3 {
+      font-size: 20px;
+      margin-top: 0;
+    }
+
+    .contact-item {
+      margin-bottom: 15px;
+    }
+
+    .contact-item span {
+      display: block;
+      color: #555;
+    }
+
+    .services {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .services ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .services li {
+      margin: 10px 0;
+      color: #2e7d32;
+    }
+
+    .faq {
+      margin-top: 60px;
+    }
+
+    .faq h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    .faq-item {
+      margin-bottom: 30px;
+    }
+
+    .faq-item h4 {
+      margin-bottom: 10px;
+      color: #111;
+    }
+
+    .faq-item p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .form-connect {
+        flex-direction: column;
+      }
+    }
+
+    .back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  color: #000000;
+  padding: 10px 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="back-button">← Back</a>
+    <h1>Contact Us</h1>
+    <p class="subtext">Let’s discuss your photo retouching and video editing project</p>
+
+    <div class="form-connect">
+      <!-- Contact Form -->
+      <div class="form-section">
+          <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+            <input type="hidden" name="access_key" value="343a0791-41f5-4262-af99-520898af8cb9">
+            <input type="text" placeholder="Full Name" name="name" required>
+            <input type="email" placeholder="Email Address" name="email" required>
+            <textarea name="message" placeholder="Tell us about your project, timeline, and any specific requirements..." maxlength="500" required></textarea>
+
+            <select name="service" required>
+              <option disabled selected>Select a service</option>
+              <option>Professional Fashion Retouching</option>
+              <option>High-End Beauty Retouching</option>
+              <option>Jewellery Enhancement Retouching</option>
+              <option>Product Photography Enhancement</option>
+              <option>E-commerce Image Optimization</option>
+              <option>Custom Creative Solutions</option>
+            </select>
+            <button type="submit">Send Message</button>
+          </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="connect-section">
+        <div class="contact-item">
+          <h3>Email</h3>
+          <span>poonamrajput6213@gmail.com</span>
+        </div>
+        <div class="contact-item">
+          <h3>Phone</h3>
+          <span>+91 8882-030-891</span>
+          <span>Available Mon–Sat, 10AM–7PM</span>
+        </div>
+        <div class="contact-item">
+          <h3>Response Time</h3>
+          <span>Within 24 hours</span>
+          <span>Rush projects available</span>
+        </div>
+
+        <div class="services">
+          <h3>Our Services</h3>
+          <ul>
+            <li>✔ Fashion & Beauty Retouching</li>
+            <li>✔ Product Photography Enhancement</li>
+            <li>✔ E-commerce Image Optimization</li>
+            <li>✔ Video Editing & Color Grading</li>
+            <li>✔ Custom Creative Solutions</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="faq">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <h4>What’s your turnaround time?</h4>
+        <p>Standard projects: 2–5 business days. Rush jobs available within 24–48 hours.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>What file formats do you accept?</h4>
+        <p>We work with RAW, JPEG, TIFF, PSD, and most video formats including MP4, MOV</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Do you offer revisions?</h4>
+        <p>Yes! We include 2 rounds of revisions with every project to ensure your satisfaction.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>How do you handle large files?</h4>
+        <p>We use secure cloud platforms like WeTransfer, or Google Drive for file transfers.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
